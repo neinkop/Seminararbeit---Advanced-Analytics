@@ -1,0 +1,27 @@
+\chapter{Hauptteil}
+...
+
+\section{Technische Architektur}
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=\textwidth]{Abbildungen/Containerarchitektur.png}
+    \caption[Containerarchitektur]{Containerarchitektur\footnotemark}
+    \label{fig:containerarchitektur}
+\end{figure}
+\footnotetext{Eigene Darstellung.}
+
+Wie in Abbildung \ref{fig:containerarchitektur} illustriert, setzt sich die Systemlandschaft aus insgesamt sechs funktionalen Containern zusammen. Das Fundament bilden drei identische Instanzen zur Datenaufbereitung, welche durch die Übergabe unterschiedlicher Parameter jeweils spezifische Zeiträume (2024, 2025 und 2026) parallel prozessieren. Diese mehrfache Instanziierung unterstreicht die effiziente Wiederverwendbarkeit von Container-Images und realisiert eine horizontale Skalierung auf Ebene der Datenaufnahme. Der resultierende Datenfluss verläuft sukzessive über den Forecast-Container, welcher die prädiktiven Modelle vorhält, hin zur REST-API, die als zentrale Schnittstelle für den Datenaustausch fungiert. Den Abschluss bildet der Visualisierungs-Container, der die aufbereiteten und prognostizierten Informationen für den Endanwender grafisch aufbereitet.
+
+\section{Aufbereitung der Daten}
+...
+
+\section{Visualisierung von Taxifahrten}
+...
+
+\section{Prognose von Taxifahrten}
+- Log Umrechnung
+- Sinus/Cosinus
+...
+
+\section{Mögliche Analysen}
+...
